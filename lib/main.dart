@@ -13,7 +13,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   int _questionIndex = 0;
-  var _totalScore = 0;
+  int _totalScore = 0;
   final _questions = const [
     {
       'questionText': 'What is your fovorite color',
@@ -43,7 +43,7 @@ class _MyAppState extends State<MyApp> {
   void _answerQuestion(int score) {
     _totalScore += score;
     setState(() {
-      _questionIndex = _questionIndex + 1;
+      _questionIndex += 1;
     });
   }
 
